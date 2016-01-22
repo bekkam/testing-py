@@ -38,12 +38,6 @@ def is_mel(name, email):
 def most_and_least_common_type(treats):
     """Given list of treats, return {most, least} common types.
 
-    If length of treats list is 1:
-
-        >>> test_list = [{"type":"dessert"}]
-        >>> most_and_least_common_type(test_list)
-        ('dessert', 'dessert')
-
     Base case:
 
         >>> test_list
@@ -51,6 +45,12 @@ def most_and_least_common_type(treats):
 
         >>> most_and_least_common_type(test_list)
         ('dessert', 'appetizer')
+
+    If length of treats list is 1:
+
+        >>> test_list = [{"type":"dessert"}]
+        >>> most_and_least_common_type(test_list)
+        ('dessert', 'dessert')
 
     """
 
