@@ -9,13 +9,50 @@ app.secret_key = "SECRETSECRETSECRET"
 
 
 def is_mel(name, email):
-    """Is this user Mel?"""
+    """Is this user Mel?
+
+    If the user is Mel:
+
+        >>> is_mel('Mel Melitpolski', 'mel@ubermelon.com')
+        True
+
+    If the user is not Mel:
+
+        >>> is_mel('Judith Butler', 'judith@awesome.com')
+        False
+
+    If Mel enters his name but someone else's email:
+
+        >>> is_mel('Mel Melitpolski', 'judith@awesome.com')
+        True
+
+    If Mel enters his email but someone else's name:
+
+        >>> is_mel('Judith Butler', 'mel@ubermelon.com')
+        True
+    """
 
     return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
 
 
 def most_and_least_common_type(treats):
-    """Given list of treats, return {most, least} common types."""
+    """Given list of treats, return {most, least} common types.
+
+    If length of treats list is 1:
+
+        >>> test_list = [{"type":"dessert"}]
+        >>> most_and_least_common_type(test_list)
+        ('dessert', 'dessert')
+
+    Base case:
+
+        >>> test_list
+        [{'type': 'dessert'}, {'type': 'dessert'}, {'type': 'appetizer'}]
+
+        >>> most_and_least_common_type(test_list)
+        ('dessert', 'appetizer')
+
+    """
 
     types = {}
 
