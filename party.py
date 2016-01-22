@@ -49,8 +49,24 @@ def most_and_least_common_type(treats):
     If length of treats list is 1:
 
         >>> test_list = [{"type":"dessert"}]
+
         >>> most_and_least_common_type(test_list)
         ('dessert', 'dessert')
+
+    If there is a tie for most or least:
+
+        >>> test_list
+        [{'type': 'dessert'}, {'type': 'appetizer'}]
+
+        >>> most_and_least_common_type(test_list)
+        ('dessert', 'dessert')
+
+    If an empty list is given:
+
+        >>> test_list = []
+
+        >>> most_and_least_common_type(test_list)
+        (None, None)
 
     """
 
